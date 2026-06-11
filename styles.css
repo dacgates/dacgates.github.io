@@ -144,7 +144,7 @@ h3 { font-size: 1.5rem; letter-spacing: -0.025em; }
   background: #202c27;
 }
 .achievement-card.standout {
-  grid-column: span 2;
+  grid-column: span 3;
   background: var(--lime);
   color: var(--ink);
 }
