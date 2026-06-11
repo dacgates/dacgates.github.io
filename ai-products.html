@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI product engineering case studies by Arvind C Durairajan: AutoRB, AutoPM, and AutoCD.">
+  <title>AI Products | Arvind C Durairajan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">ACD</a>
+    <nav aria-label="Primary navigation"><a href="index.html">Home</a><a href="experience.html">Experience</a><a href="ai-products.html" class="active-nav">AI Products</a><a class="nav-contact" href="index.html#contact">Contact</a></nav>
+  </header>
+  <main>
+    <section class="subpage-hero ai-page-hero">
+      <p class="eyebrow">Applied AI product engineering</p>
+      <h1>AI that works inside real engineering workflows.</h1>
+      <p>I build local-first AI products that combine model capability with deterministic services, trusted data, human review, and measurable quality controls. The goal is not AI output alone; it is reliable, reusable, auditable work.</p>
+      <div class="subpage-stats"><div><strong>3</strong><span>AI-enabled products</span></div><div><strong>85</strong><span>Python product modules</span></div><div><strong>23</strong><span>User-facing workflows</span></div><div><strong>56</strong><span>AutoRB quality checks</span></div></div>
+    </section>
+
+    <section class="section ai-principles">
+      <div class="section-heading"><p class="eyebrow">Product philosophy</p><h2>Model intelligence, bounded by engineering discipline.</h2></div>
+      <div class="value-grid">
+        <article><span>01</span><h3>Local-first and provider-flexible</h3><p>Supports local Ollama models and online or CLI providers through reusable service interfaces.</p></article>
+        <article><span>02</span><h3>Truth-source governed</h3><p>Separates approved factual sources, user-confirmed evidence, generated output, and reusable memory.</p></article>
+        <article><span>03</span><h3>Human-controlled</h3><p>Uses review, correction, quality gates, versioning, and approval points before final artifacts are accepted.</p></article>
+      </div>
+    </section>
+
+    <section class="section product-case-section">
+      <div class="product-case product-rb">
+        <div class="product-case-head"><div><span class="product-number">01</span><p class="eyebrow">Job intelligence and resume engineering</p><h2>AutoRB</h2><p>A governed workflow for capturing opportunities, evaluating fit, tailoring truthful resumes, reviewing gaps, improving alignment, and producing consistent application artifacts.</p></div><div class="product-proof"><strong>56</strong><span>Automated quality checks protect factual accuracy, fixed role data, structure, completeness, and layout rules.</span></div></div>
+        <div class="product-detail-grid">
+          <article><h3>Problem addressed</h3><p>Tailored resumes often drift from factual experience, break formatting, omit roles, or become inconsistent across repeated improvement passes.</p></article>
+          <article><h3>Core workflows</h3><ul><li>Job capture, scoring, prioritization, and resume-source recommendation</li><li>Role-family-aware tailoring using approved master-resume evidence</li><li>Review reports, user-confirmed improvements, and versioned resume/report pairs</li><li>Canonical Markdown normalization, DOCX styling, formatting, and saving</li></ul></article>
+          <article><h3>Engineering controls</h3><ul><li>Fixed role periods, companies, locations, and protected titles</li><li>Truth-source validation and anti-invention prompt rules</li><li>Quality gates for role count, bullets, summary length, and rendered-line budgets</li><li>KPI capture for model time, local processing, token use, and individual checks</li></ul></article>
+        </div>
+        <div class="product-stack"><span>Python</span><span>Streamlit</span><span>Ollama</span><span>Online/CLI Models</span><span>DOCX</span><span>JSON</span><span>Quality Gates</span></div>
+      </div>
+
+      <div class="product-case product-pm">
+        <div class="product-case-head"><div><span class="product-number">02</span><p class="eyebrow">Project intelligence and delivery systems</p><h2>AutoPM</h2><p>An AI-assisted project-management environment for structured analysis, ASPICE-oriented work, release-lifecycle visibility, roadmap creation, and decision-ready reporting.</p></div><div class="product-proof"><strong>7</strong><span>Integrated workflows supporting AI control, analysis, monitoring, roadmaps, release lifecycle, uploads, and watcher operations.</span></div></div>
+        <div class="product-detail-grid">
+          <article><h3>Problem addressed</h3><p>Complex engineering projects distribute critical planning evidence across files, reports, process models, and disconnected status views.</p></article>
+          <article><h3>Core workflows</h3><ul><li>AI-assisted project and ASPICE analysis with selectable roles and expectations</li><li>Release-lifecycle and role-oriented monitoring views</li><li>Structured roadmap data collection, editing, validation, and generation</li><li>Decision-ready project reports and reusable planning context</li></ul></article>
+          <article><h3>Roadmap engineering</h3><ul><li>JSON as canonical planning data and editable Excel as generated output</li><li>Monthly overview/detail sheets and yearly weekly roadmap views</li><li>Parent/child lanes, gates, entry/exit criteria, artifacts, and version history</li><li>Project, quality, safety, ASPICE, release, test, and Agile/SAFe perspectives</li></ul></article>
+        </div>
+        <div class="product-stack"><span>Python</span><span>Streamlit</span><span>Structured JSON</span><span>Excel Generation</span><span>ASPICE</span><span>Roadmaps</span></div>
+      </div>
+
+      <div class="product-case product-cd">
+        <div class="product-case-head"><div><span class="product-number">03</span><p class="eyebrow">AI-assisted software engineering</p><h2>AutoCD</h2><p>A coding workflow that helps engineers generate, modify, explain, review, and discuss code using relevant local-project context and reusable review rules.</p></div><div class="product-proof"><strong>5</strong><span>User-facing workflows covering generation, modification, explanation/review, chat, and free-prompt work.</span></div></div>
+        <div class="product-detail-grid">
+          <article><h3>Problem addressed</h3><p>AI coding support becomes unreliable when it lacks project context, ignores engineering standards, or produces reviews that cannot be traced to a source version.</p></article>
+          <article><h3>Core workflows</h3><ul><li>Generate and modify code with selected project files</li><li>Explain, analyze, and review source using standards-oriented rule profiles</li><li>Project-aware chat and free-prompt interactions</li><li>Versioned review reports saved beside the reviewed source</li></ul></article>
+          <article><h3>Context engineering</h3><ul><li>Local project indexing and relevant-file selection</li><li>Project-native component memory scaffolding</li><li>Optional project or company-specific review rules</li><li>Local and online provider support through shared AI services</li></ul></article>
+        </div>
+        <div class="product-stack"><span>Python</span><span>Local Project Index</span><span>Code Review</span><span>Versioned Reports</span><span>Ollama</span><span>Online Providers</span></div>
+      </div>
+    </section>
+
+    <section class="section architecture-section">
+      <div class="section-heading"><p class="eyebrow">Reusable architecture</p><h2>One operating model across the product suite.</h2></div>
+      <div class="architecture-flow"><div><span>01</span><strong>Trusted inputs</strong><small>User data · project files · approved sources</small></div><b>→</b><div><span>02</span><strong>Shared AI services</strong><small>Local and online model orchestration</small></div><b>→</b><div><span>03</span><strong>Domain workflows</strong><small>AutoRB · AutoPM · AutoCD</small></div><b>→</b><div><span>04</span><strong>Governed outputs</strong><small>Quality gates · review · versioning · KPIs</small></div></div>
+    </section>
+
+    <section class="page-cta"><p class="eyebrow">Applied AI with engineering judgment</p><h2>Interested in the product thinking behind these tools?</h2><div class="hero-actions"><a class="button light" href="mailto:arvind.chakaravarthy@gmail.com">Start a conversation</a><a class="button outline-light" href="experience.html">Explore my experience</a></div></section>
+  </main>
+  <footer><span>© <span id="year"></span> Arvind C Durairajan</span><a href="index.html">Back to homepage</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
