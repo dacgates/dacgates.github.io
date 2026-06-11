@@ -50,8 +50,8 @@ nav a:hover { color: var(--green); }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
-  gap: clamp(34px, 7vw, 100px);
+  grid-template-columns: minmax(0, 1fr) minmax(420px, .82fr);
+  gap: clamp(40px, 6vw, 90px);
   align-items: center;
   min-height: calc(100vh - 83px);
   padding: clamp(70px, 9vw, 140px) clamp(22px, 8vw, 130px);
@@ -68,7 +68,8 @@ nav a:hover { color: var(--green); }
   text-transform: uppercase;
 }
 h1, h2, h3 { margin-top: 0; font-family: "Space Grotesk", sans-serif; line-height: 1.12; }
-h1 { max-width: 850px; margin-bottom: 25px; font-size: clamp(3.2rem, 7vw, 7.3rem); letter-spacing: -0.065em; }
+h1 { max-width: 850px; margin-bottom: 25px; font-size: clamp(3.2rem, 6.5vw, 7rem); letter-spacing: -0.065em; }
+h1 span { color: var(--green); }
 h2 { margin-bottom: 20px; font-size: clamp(2.35rem, 4vw, 4.6rem); letter-spacing: -0.055em; }
 h3 { font-size: 1.5rem; letter-spacing: -0.025em; }
 .hero-intro { max-width: 740px; margin: 0; color: var(--muted); font-size: clamp(1.05rem, 1.7vw, 1.35rem); }
@@ -79,13 +80,19 @@ h3 { font-size: 1.5rem; letter-spacing: -0.025em; }
 .secondary { border: 1px solid var(--ink); }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 10px 25px; margin-top: 42px; color: var(--muted); font-size: 0.9rem; }
 
-.hero-card { padding: 30px; border: 1px solid rgba(23,33,29,.12); border-radius: 30px; background: rgba(255,253,247,.8); box-shadow: var(--shadow); }
-.signal { display: flex; align-items: center; gap: 9px; padding-bottom: 20px; color: var(--green); border-bottom: 1px solid var(--line); font-size: .83rem; font-weight: 700; }
-.signal span { width: 9px; height: 9px; border-radius: 50%; background: #50b981; box-shadow: 0 0 0 6px rgba(80,185,129,.14); }
-.metric { display: grid; grid-template-columns: 96px 1fr; align-items: center; gap: 14px; padding: 20px 0; border-bottom: 1px solid var(--line); }
-.metric:last-child { border-bottom: 0; padding-bottom: 0; }
-.metric strong { font-family: "Space Grotesk", sans-serif; font-size: 2.15rem; letter-spacing: -.05em; }
-.metric span { color: var(--muted); font-size: .92rem; }
+.hero-profile { position: relative; }
+.profile-image-wrap { position: relative; width: min(100%, 520px); margin-left: auto; }
+.profile-image-wrap::before { content: ""; position: absolute; inset: -18px 22px 22px -18px; z-index: 0; border-radius: 34px; background: var(--lime); transform: rotate(-3deg); }
+.profile-image-wrap img { position: relative; z-index: 1; display: block; width: 100%; aspect-ratio: 1 / 1.03; object-fit: cover; object-position: center 25%; border-radius: 30px; filter: saturate(.8) contrast(1.04); box-shadow: var(--shadow); }
+.profile-status { position: absolute; z-index: 2; right: -15px; bottom: 22px; display: flex; align-items: center; gap: 8px; max-width: 250px; padding: 12px 16px; border-radius: 999px; background: var(--card); box-shadow: 0 12px 30px rgba(23,33,29,.18); color: var(--green); font-size: .72rem; font-weight: 800; }
+.profile-status span { width: 8px; height: 8px; border-radius: 50%; background: #50b981; box-shadow: 0 0 0 5px rgba(80,185,129,.16); }
+.profile-panel { position: relative; z-index: 3; width: 88%; margin: -48px 0 0 auto; padding: 25px; border-radius: 22px; background: var(--green-dark); color: white; box-shadow: var(--shadow); }
+.profile-kicker { margin: 0 0 8px; color: var(--lime); font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.profile-panel h2 { margin-bottom: 20px; font-size: 1.65rem; letter-spacing: -.035em; }
+.profile-proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.profile-proof strong, .profile-proof span { display: block; }
+.profile-proof strong { color: var(--lime); font-family: "Space Grotesk", sans-serif; font-size: 1.7rem; }
+.profile-proof span { color: #c1d3ca; font-size: .65rem; line-height: 1.35; }
 
 .capability-strip { display: flex; gap: 34px; overflow: hidden; padding: 17px 0; background: var(--ink); color: white; font-size: .77rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
 .capability-strip span::before { content: "✦"; margin: 0 34px 0 0; color: var(--lime); }
@@ -93,17 +100,28 @@ h3 { font-size: 1.5rem; letter-spacing: -0.025em; }
 .section { padding: clamp(85px, 11vw, 160px) clamp(22px, 8vw, 130px); }
 .section-heading { max-width: 850px; margin-bottom: 55px; }
 .section-heading > p:last-child { max-width: 690px; color: var(--muted); font-size: 1.08rem; }
-.experience-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 22px; }
-.experience { padding: 31px; border: 1px solid var(--line); border-radius: 24px; background: var(--card); }
-.experience.featured { grid-row: span 2; padding: clamp(32px, 5vw, 55px); background: var(--green-dark); color: white; }
-.experience-top { display: flex; justify-content: space-between; gap: 20px; margin-bottom: 50px; color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
-.featured .experience-top { color: #a8c5b8; }
-.featured h3 { font-size: clamp(2rem, 3vw, 3.2rem); }
-.experience p { color: var(--muted); }
-.featured p, .featured li { color: #d5e3dc; }
-.experience ul, .project-card ul { padding-left: 20px; }
-.experience li, .project-card li { margin-bottom: 13px; }
-.result { margin: 35px 0 0; padding-top: 20px; border-top: 1px solid var(--line); font-weight: 700; }
+.career-spotlight { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; margin-bottom: 22px; padding: clamp(32px, 5vw, 60px); border-radius: 28px; background: var(--green-dark); color: white; }
+.spotlight-copy h3 { max-width: 720px; margin-bottom: 18px; font-size: clamp(2rem, 4vw, 4rem); }
+.spotlight-copy > p:last-child { max-width: 670px; color: #c7d8d0; }
+.spotlight-metrics { display: grid; grid-template-columns: repeat(2, 1fr); border: 1px solid rgba(255,255,255,.14); border-radius: 20px; overflow: hidden; }
+.spotlight-metrics div { padding: 25px; border-right: 1px solid rgba(255,255,255,.14); border-bottom: 1px solid rgba(255,255,255,.14); }
+.spotlight-metrics div:nth-child(2n) { border-right: 0; }
+.spotlight-metrics div:nth-last-child(-n+2) { border-bottom: 0; }
+.spotlight-metrics strong, .spotlight-metrics span { display: block; }
+.spotlight-metrics strong { color: var(--lime); font-family: "Space Grotesk", sans-serif; font-size: 2.8rem; letter-spacing: -.06em; }
+.spotlight-metrics span { color: #c7d8d0; font-size: .75rem; }
+.career-timeline { border-top: 1px solid var(--line); }
+.career-role { display: grid; grid-template-columns: 70px minmax(170px, .35fr) 1fr; gap: 25px; padding: 42px 0; border-bottom: 1px solid var(--line); }
+.career-marker span { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line); color: var(--green); font-family: "Space Grotesk", sans-serif; font-size: .8rem; font-weight: 700; }
+.career-role.current .career-marker span { border-color: var(--green); background: var(--green); color: white; }
+.career-meta span, .career-meta strong { display: block; }
+.career-meta span { margin-bottom: 8px; color: var(--green); font-size: .75rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.career-meta strong { font-size: .83rem; }
+.career-content h3 { margin-bottom: 12px; font-size: clamp(1.6rem, 2.5vw, 2.5rem); }
+.career-content > p { max-width: 850px; color: var(--muted); }
+.role-tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 20px 0; }
+.role-tags span { padding: 6px 10px; border-radius: 999px; background: #e3e6dc; color: var(--green-dark); font-size: .7rem; font-weight: 700; }
+.career-content .career-result { margin: 20px 0 0; padding-left: 16px; border-left: 3px solid var(--green); color: var(--ink); font-weight: 700; }
 
 .achievements-section {
   background: var(--ink);
@@ -215,9 +233,12 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 35px
 
 @media (max-width: 900px) {
   nav a:not(.nav-contact) { display: none; }
-  .hero, .experience-grid, .credentials-grid, .achievements-grid, .ai-impact-grid, .ai-system-card, .ai-capability-grid { grid-template-columns: 1fr; }
+  .hero, .credentials-grid, .achievements-grid, .ai-impact-grid, .ai-system-card, .ai-capability-grid, .career-spotlight { grid-template-columns: 1fr; }
   .hero { min-height: auto; }
-  .experience.featured { grid-row: auto; }
+  .hero-profile { max-width: 580px; }
+  .profile-image-wrap { margin: 0; }
+  .career-role { grid-template-columns: 55px 1fr; }
+  .career-content { grid-column: 2; }
   .achievement-card.standout { grid-column: auto; }
   .visual-node { min-height: 140px; padding: 15px; }
 }
@@ -225,8 +246,12 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 35px
   h1 { font-size: 3.2rem; }
   .site-header { padding: 14px 18px; }
   .hero, .section { padding-left: 18px; padding-right: 18px; }
-  .hero-card, .experience, .project-card { border-radius: 20px; }
-  .metric { grid-template-columns: 80px 1fr; }
-  .experience-top, footer { flex-direction: column; }
+  .profile-panel { width: 96%; margin-top: -25px; }
+  .profile-proof { grid-template-columns: 1fr; }
+  .profile-proof div { display: grid; grid-template-columns: 65px 1fr; align-items: center; }
+  .career-role { grid-template-columns: 45px 1fr; gap: 12px; padding: 32px 0; }
+  .career-content { grid-column: 1 / -1; padding-left: 57px; }
+  .spotlight-metrics { grid-template-columns: 1fr 1fr; }
+  footer { flex-direction: column; }
   .contact-section { margin: 0 8px; padding: 45px 24px; }
 }
