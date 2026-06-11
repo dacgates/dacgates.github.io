@@ -271,10 +271,13 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 35px
 .role-columns ul { padding-left: 18px; color: var(--muted); }
 .role-columns li { margin-bottom: 10px; }
 .impact-stack { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 22px; }
-.impact-stack div { padding: 14px; border-radius: 12px; background: rgba(215,240,108,.13); }
+.impact-stack div { padding: 14px; border-radius: 12px; background: #edf1e8; }
 .impact-stack strong, .impact-stack span { display: block; }
-.impact-stack strong { color: var(--lime); font-family: "Space Grotesk",sans-serif; font-size: 1.9rem; }
-.impact-stack span { color: #c7d8d0; font-size: .65rem; }
+.impact-stack strong { color: var(--green); font-family: "Space Grotesk",sans-serif; font-size: 1.9rem; }
+.impact-stack span { color: var(--muted); font-size: .65rem; }
+.featured-deep-role .impact-stack div { background: rgba(215,240,108,.13); }
+.featured-deep-role .impact-stack strong { color: var(--lime); }
+.featured-deep-role .impact-stack span { color: #c7d8d0; }
 .page-cta { margin: 0 clamp(14px,3vw,42px); padding: clamp(55px,8vw,105px); border-radius: 34px; background: var(--green-dark); color: white; }
 .page-cta .eyebrow { color: var(--lime); }
 .page-cta h2 { max-width: 1050px; }
