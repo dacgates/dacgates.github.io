@@ -94,7 +94,7 @@ h3 { font-size: 1.5rem; letter-spacing: -0.025em; }
 .profile-proof strong { color: var(--lime); font-family: "Space Grotesk", sans-serif; font-size: 1.7rem; }
 .profile-proof span { color: #c1d3ca; font-size: .65rem; line-height: 1.35; }
 
-.capability-strip { display: flex; gap: 34px; overflow: hidden; padding: 17px 0; background: var(--ink); color: white; font-size: .77rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.capability-strip { display: flex; justify-content: center; gap: 34px; overflow: hidden; padding: 17px 0; background: var(--ink); color: white; font-size: .77rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
 .capability-strip span::before { content: "✦"; margin: 0 34px 0 0; color: var(--lime); }
 
 .section { padding: clamp(85px, 11vw, 160px) clamp(22px, 8vw, 130px); }
@@ -241,6 +241,7 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 35px
   .career-content { grid-column: 2; }
   .achievement-card.standout { grid-column: auto; }
   .visual-node { min-height: 140px; padding: 15px; }
+  .capability-strip { justify-content: flex-start; }
 }
 @media (max-width: 560px) {
   h1 { font-size: 3.2rem; }
