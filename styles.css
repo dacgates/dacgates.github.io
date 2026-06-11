@@ -105,6 +105,68 @@ h3 { font-size: 1.5rem; letter-spacing: -0.025em; }
 .experience li, .project-card li { margin-bottom: 13px; }
 .result { margin: 35px 0 0; padding-top: 20px; border-top: 1px solid var(--line); font-weight: 700; }
 
+.achievements-section {
+  background: var(--ink);
+  color: white;
+}
+.achievements-section .eyebrow { color: var(--lime); }
+.achievements-section .section-heading > p:last-child { color: #b9c4be; }
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.achievement-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 330px;
+  padding: 27px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 22px;
+  background: #202c27;
+}
+.achievement-card.standout {
+  grid-column: span 2;
+  background: var(--lime);
+  color: var(--ink);
+}
+.achievement-card.award-card { background: var(--green); }
+.achievement-number {
+  margin-bottom: 30px;
+  color: var(--lime);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(3rem, 5vw, 5.4rem);
+  font-weight: 700;
+  line-height: .9;
+  letter-spacing: -.07em;
+}
+.standout .achievement-number { color: var(--green-dark); }
+.achievement-card h3 { margin-bottom: 14px; font-size: 1.35rem; }
+.achievement-card p { margin: 0; color: #bac7c0; font-size: .93rem; }
+.standout p { color: #3e4d45; }
+.achievement-context {
+  margin-top: auto;
+  padding-top: 25px;
+  color: #8fa198;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.standout .achievement-context { color: #526159; }
+.award-mark {
+  align-self: flex-start;
+  margin-bottom: 42px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--ink);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
 .projects-section { background: #e5e9dd; }
 .project-card { display: grid; grid-template-columns: 1.25fr .75fr; gap: 32px 70px; padding: clamp(32px, 6vw, 70px); border-radius: 30px; background: var(--card); box-shadow: var(--shadow); }
 .project-card h3 { max-width: 620px; margin-bottom: 18px; font-size: clamp(2rem, 4vw, 4rem); }
@@ -127,9 +189,10 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 35px
 
 @media (max-width: 900px) {
   nav a:not(.nav-contact) { display: none; }
-  .hero, .experience-grid, .project-card, .credentials-grid { grid-template-columns: 1fr; }
+  .hero, .experience-grid, .project-card, .credentials-grid, .achievements-grid { grid-template-columns: 1fr; }
   .hero { min-height: auto; }
   .experience.featured { grid-row: auto; }
+  .achievement-card.standout { grid-column: auto; }
   .project-card ul { grid-column: auto; columns: 1; }
 }
 @media (max-width: 560px) {
